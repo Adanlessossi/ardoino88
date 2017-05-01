@@ -1,0 +1,112 @@
+include mixins
+
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .navbar-wrapper
+      .container
+        .navbar.navbar-inverse.navbar-static-top(role='navigation')
+          .container
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.navbar-brand(href='/') Ardoino 88
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav
+                li
+                      a(href='/about') Über uns
+    .container
+      #myCarousel.carousel.slide(data-ride='carousel')
+        ol.carousel-indicators
+          li.active(data-target='#myCarousel', data-slide-to='0')
+          li(data-target='#myCarousel', data-slide-to='1')
+          li(data-target='#myCarousel', data-slide-to='2')
+          li(data-target='#myCarousel', data-slide-to='3')
+          li(data-target='#myCarousel', data-slide-to='4')
+          li(data-target='#myCarousel', data-slide-to='5')
+          li(data-target='#myCarousel', data-slide-to='6')
+          li(data-target='#myCarousel', data-slide-to='7')
+
+        .carousel-inner
+          .item.active
+            img(src='../images/diano_beach.jpg', alt='First slide', width='1150', height='560')
+            .container
+              .carousel-caption
+                h1 Gemütliche Ferien
+                p
+                  | Diano Marina
+
+          .item
+            img(src='../images/diano_beach1.jpg', alt='Second slide', width='1150', height='560')
+            .container
+              .carousel-caption
+                h1 Ferien am Strand
+                p
+                  | Diano Marina
+
+          .item
+            img(src='../images/diano_beach2.jpg', alt='First slide', width='1150', height='560')
+            .container
+              .carousel-caption
+                h1 Farniente
+                p
+                  | Diano Marina
+
+          .item
+            img(src='../images/cervo1.jpg', alt='First slide', width='1150', height='560')
+            .container
+              .carousel-caption
+                h1 Farniente
+                p
+                  | Cervo
+
+          .item
+            img(src='../images/cervo2.jpg', alt='First slide', width='1150', height='560')
+            .container
+              .carousel-caption
+                h1 Farniente
+                p
+                  | Cervo
+
+          .item
+            img(src='../images/cervo3.jpg', alt='First slide', width='1150', height='560')
+            .container
+              .carousel-caption
+                h1 Farniente
+                p
+                  | Cervo
+
+          .item
+            img(src='../images/meer1.jpg', alt='First slide', width='1150', height='560')
+            .container
+              .carousel-caption
+                h1 Farniente
+                p
+                  | Das Meer
+
+          .item
+            img(src='../images/meer2.jpg', alt='First slide', width='1150', height='560')
+            .container
+              .carousel-caption
+                h1 Farniente
+                p
+                  | Das Meer
+
+        a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left
+        a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right
+
+    block content
+
+
+    script(src='/javascripts/jquery-3.1.1.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
