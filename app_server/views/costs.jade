@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .container
+    breadcrumb
+      a(href='/') Home    
+      active   Kosten
+    h1= title
+    .row
+      each cost in costs
+        .col-sm-4.col-lg-4.col-md-4
+          .thumbnail
+            img(src='#{cost.image}' , width='350', height='160')
+            h4.pull-right Euro #{cost.price}
+            h4 #{cost.name} 
+            p #{cost.description}
+
+            ratings
+              p.pull-right
+                p.span.glyphicon.glyphicon-star
+                p.span.glyphicon.glyphicon-star
+                p.span.glyphicon.glyphicon-star
+                p.span.glyphicon.glyphicon-star
+                p.span.glyphicon.glyphicon-star

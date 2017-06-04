@@ -3,13 +3,14 @@ include mixins
 extends layout
 
 block content
-  h1= title
-  p Wilkommen by uns #{title}
+  .container
+    h1= title
+    p Wilkommen by uns #{title}
 
-  .row
-    .col-md-4.col-sm-6.col-xs-12
-      +panel("Weg Beschreibung", "primary", "/direction") #{panelText1}
-    .col-md-4.col-sm-6.col-xs-12
-      +panel("Beschreibung des Hauses", "primary", "/description") #{panelText2}
-    .col-md-4.col-sm-6.col-xs-12
-      +panel("Kosten pro Woche", "primary", "/costs") #{panelText3}
+    .row
+      .col-md-4.col-sm-6.col-xs-12
+        +panel("Weg Beschreibung", "primary", "/direction") #{panelText1}
+      .col-md-4.col-sm-6.col-xs-12
+        +panel("Beschreibung des Hauses", "primary", "/description") #{panelText2}
+      .col-md-4.col-sm-6.col-xs-12
+        +panel("Kosten pro Woche", "primary", "/costs") #{panelText3}

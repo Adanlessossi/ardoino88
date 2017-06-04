@@ -1,5 +1,27 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    breadcrumb
+      a(href='/') Home    
+      active   Kontakt
+    .row.page-header: .col-lg-12
+      h1= title
+    .row.page-header
+      each owner in owners
+        .col-xs-12.col-sm-6
+          media.media-left.media-top
+          if owner.male
+            img.media-object(src='../images/img_avatar1.png', width='60px')
+          else
+            img.media-object(src='../images/img_avatar2.jpg', width='60px')
+          media-body
+            b.media-heading #{owner.name}
+            p #{owner.description}
+            .col-md-4
+              span.glyphicon.glyphicon-globe
+              p
+              a( href="mailto: #{owner.email}")  #{owner.email}
+              p #{owner.strasse}
+              p #{owner.plz} - #{owner.ort}
+              p #{owner.phone}

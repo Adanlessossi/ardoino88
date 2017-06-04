@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .container
+    breadcrumb
+      a(href='/') Home    
+      active   Wegbeschreibung
+    .row
+      .col-lg-12
+        h1 #{title}
+          h4 Carte zum herunterladen    
+           i.fa.fa-file-photo-o
+             a( href="../images/weg_beschreibung.png" )   Map
+    .row
+      .col-md-12
+        img.pull-left.img-responsive.img-thumbnail.margin10(src='../images/weg1.jpg' , width='650', height='360')
+        article
+           h3=panelText1
+           h3=panelText2
+           h3=panelText3
+           h3=panelText4
+        img.pull-left.img-responsive.img-thumbnail.margin10(src='../images/Tovo3.jpg' , width='650', height='360')
+        article
+          h3=panelText5
+

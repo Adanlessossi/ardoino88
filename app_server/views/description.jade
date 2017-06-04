@@ -1,0 +1,111 @@
+extends layout
+
+block content
+  .container
+    breadcrumb
+      a(href='/') Home    
+      active   Haus Ordnung
+    .row.page-header: .col-lg-12
+      h1= title
+    .row.page-header
+      .col-xs-12.col-sm-6
+        h2=  ruleText
+        p Wir bitten alle Gäste die Bedienungsanleitung sorgfaltig zu lesen
+      .col-xs-12.col-sm-6
+        h2 Bedienungsanleitung
+        i.fa.fa-file-pdf-o
+          a( href="../images/Bedienungsanleitung2017.pdf" )        #{ruleDocument}
+        p Beschreibung und Bedienungsanleitung des 'Casa Tovo'. Wenn alles läuft, wie es soll​, dann hat es Kaffee, Essig und Öl, Bier, Weiss- und Rotwein, Salz, Pfeffer undsoweiter...
+    .row.page-header: .col-lg-12
+      .container
+        h1 Einige Bilder vom Haus
+        #myCarousel.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+              li.active(data-target='#myCarousel', data-slide-to='0')
+              li(data-target='#myCarousel', data-slide-to='1')
+              li(data-target='#myCarousel', data-slide-to='2')
+              li(data-target='#myCarousel', data-slide-to='3')
+              li(data-target='#myCarousel', data-slide-to='4')
+              li(data-target='#myCarousel', data-slide-to='5')
+              li(data-target='#myCarousel', data-slide-to='6')
+              li(data-target='#myCarousel', data-slide-to='7')
+              li(data-target='#myCarousel', data-slide-to='8')
+              li(data-target='#myCarousel', data-slide-to='9')
+              li(data-target='#myCarousel', data-slide-to='10')
+
+          .carousel-inner
+            .item.active
+              img(src='../images/haus1.jpg', width='1150', height='560')
+              .container
+                .carousel-caption
+                  h1 Tovo Faraldi
+                  p
+                    | Von Weit
+            .item
+              img(src='../images/Tovo3.jpg', width='1150', height='560')
+              .container
+                .carousel-caption
+                  h1 Tovo Faraldi
+                  p
+                    | Das Tunnel
+            .item
+              img(src='../images/haus3.jpg', width='1150', height='560')
+              .container
+                .carousel-caption
+                  h1 Tovo Faraldi
+                  p
+                    | Der Eingang
+            .item
+              img(src='../images/panorama1.jpg', width='1150', height='560')
+              .container
+                .carousel-caption
+                  h1 Tovo Faraldi
+                  p
+                    | Panorama
+            .item
+              img(src='../images/panorama4.jpg', width='1150', height='560')
+              .container
+                .carousel-caption
+                  h1 Tovo Faraldi
+                  p
+                    | Panorama
+            .item
+              img(src='../images/panorama5.jpg', width='1150', height='560')
+              .container
+                .carousel-caption
+                  h1 Tovo Faraldi
+                  p
+                    | Panorama
+            .item
+              img(src='../images/kuche.jpg', width='1150', height='560')
+              .container
+                .carousel-caption
+                  h1 Tovo Faraldi
+                  p
+                    | Die Kuche
+            .item
+              img(src='../images/wohnzimmer_unten.jpg', width='1150', height='560')
+              .container
+                .carousel-caption
+                  h1 Tovo Faraldi
+                  p
+                    | Das Wohnzimmer unten
+            .item
+              img(src='../images/garten_unten1.jpg', width='1150', height='560')
+              .container
+                .carousel-caption
+                  h1 Tovo Faraldi
+                  p
+                    | Garten unten
+            .item
+              img(src='../images/garten_unten2.jpg', width='1150', height='560')
+              .container
+                .carousel-caption
+                  h1 Tovo Faraldi
+                  p
+                    | Garten unten
+
+          a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left
+          a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right
